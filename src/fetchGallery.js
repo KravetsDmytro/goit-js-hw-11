@@ -3,11 +3,11 @@ import axios from 'axios';
 const API_KEY = '35566012-73194189fcef75c31768f8916';
 const URL = `https://pixabay.com/api/`;
 
-export class ApiFalleryImg {
+export class ApiGalleryImg {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
-    this.perPage = 10;
+    this.perPage = 40;
   }
   async fetchGallery() {
     const param = {

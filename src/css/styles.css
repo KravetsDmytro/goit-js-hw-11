@@ -1,5 +1,18 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -12,16 +25,11 @@ body {
   line-height: 1.5;
 }
 
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
-}input {
+input {
   font: inherit;
   max-width: 320px;
   margin-bottom: 16px;
-  color: rgb(14, 14, 171);
+  color: rgb(9, 9, 233);
   font-size: large;
   font-style: italic;
 }
@@ -73,12 +81,82 @@ button {
 }
 
 .info {
+  margin-left: auto;
+  margin-right: auto;
+  color: #0c0a0a;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10;
+  font-size: 8;
+}
+.info-item {
+  text-align: center;
+  margin: 5px;
+}
+.load-more {
+  margin-top: 35px;
 }
 
-.load-more{
-  margin-top: 35px;
+.search-form {
+  z-index: 10;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+padding-top: 8px;
+  margin-bottom: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3b54ad;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%),
+    0 2px 1px rgb(0 0 0 / 20%);
+}
+
+.search-form input {
+  padding: 8px;
+  width: 20%;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font: inherit;
+}
+
+.search-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  background-image: url(../img/search.svg);
+  background-color: #ededf5;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 70%;
+  cursor: pointer;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+.search-form button {
+  width: 35px;
+  cursor: pointer;
+  background-color: #ededf5;
+  background-image: url(../img/search.svg);
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+  box-shadow: inset -6px -5px 13px -12px #ff2144;
 }

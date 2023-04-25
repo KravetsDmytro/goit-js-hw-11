@@ -1,12 +1,10 @@
-
-
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { ApiFalleryImg } from './fetchGallery.js';
+import { ApiGalleryImg } from './fetchGallery.js';
 
 
-const apiService = new ApiFalleryImg();
+const apiService = new ApiGalleryImg();
 const searchForm = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const btnFindMore = document.querySelector('.load-more');
